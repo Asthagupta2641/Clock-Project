@@ -1,0 +1,73 @@
+/*layout*/
+/*to shift a circle in center*/
+body{
+    background-color: #FFDAB9;
+
+}
+.main {
+   
+    display: flex;
+    padding:2em;
+    height:90vh; 
+justify-content:center;
+    align-items: middle;
+}
+.date h1 {
+    text-align: center;
+    margin-bottom: 0;
+    color: #FF4500;
+}
+.clockbox,
+#clock {
+    width: 100%;
+
+}
+
+/*clock style*/
+.circle {
+    fill:none;
+    stroke: #FF6347;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #B22222;
+}
+.hour-marks {
+    fill: none;
+    stroke: #B22222;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+.hour-arm {
+    fill: none;
+    stroke: #FF7F50;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #FF7F50;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+.second-arm {
+    fill: none;
+    stroke: #FF7F50;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+/*Transparent box ensuring arms center properly.*/
+.sizing-box {
+    fill: none;
+}
+/*Make all arms rotate around the samecenter point*/
+#hour,
+#minute,
+#second {
+    
+    transform-origin: 300px 300px;
+    transition:transform .5s ease-in-out;
+}
